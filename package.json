@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "start": "node start.js"
   },
   "author": "edamian",
   "license": "ISC",
@@ -14,5 +16,9 @@
     "express": "^4.17.1",
     "mysql": "^2.18.1",
     "swagger-ui-express": "^4.1.4"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "supertest": "^4.0.2"
   }
 }

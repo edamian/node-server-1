@@ -66,6 +66,14 @@
                         "type": "string"
                     }
                 }
+            },
+            "Message": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                }
+              }
             }
         }
     }
