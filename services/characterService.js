@@ -1,5 +1,3 @@
-const axios = require("axios");
+const axios = require('axios');
 
-exports.findCharacter = async (id) => {
-    return axios.get(`https://rickandmortyapi.com/api/character/${id}`);
-}
+exports.findCharacter = async (id) => axios.get(`https://rickandmortyapi.com/api/character/${id}`);

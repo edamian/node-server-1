@@ -1,6 +1,6 @@
 exports.getNits = (index) => {
-    nits = [
-        "00",
+    const nits = [
+        '00',
         100000002,
         100000010,
         100000029,
@@ -9,7 +9,7 @@ exports.getNits = (index) => {
         100000045,
         100000053,
         100000061,
-        100000088,
+        100000088
     ];
     return nits[index];
-}
+};
