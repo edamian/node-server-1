@@ -1,0 +1,72 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "version": "1.0.0",
+      "title": "NITs API",
+      "description": "",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "servers": [
+      {
+        "url": "http://localhost:3001/",
+        "description": "Local server"
+      }
+    ],
+    "paths": {
+        "/api/characters/{id}": {
+            "get": {
+                "summary": "Get character info",
+                "tags": [
+                    "characters"
+                ],
+                "parameters": [
+                    {
+                      "name": "id",
+                      "in": "path",
+                      "required": true,
+                      "description": "ID of user",
+                      "schema": {
+                        "type": "string"
+                      }
+                    }
+                  ],
+                  "responses": {
+                    "200": {
+                      "description": "Retrieve nits successfull",
+                      "content": {
+                        "application/json": {
+                          "schema": {
+                            "$ref": "#/components/schemas/Character"
+                          }
+                        }
+                      }
+                    },
+                    "500": {
+                      "description": "Internal error"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Character": {
+                "type": "object",
+                "properties" :{
+                    "name": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "nit": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
