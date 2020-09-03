@@ -4,6 +4,7 @@ const request = supertest(app);
 
 it("Get character", async done => {
     const response = await request.get("/api/characters/3");
+    // console.log(response);
     expect(response.status).toBe(200);
     expect(response.body.nombre.length > 0).toBeTruthy();
     done();
